@@ -14,21 +14,21 @@ where first_name = "joe";
 select * from actor
 where last_name like "%GEN%";
 
-## -- 2c. Find all actors whose last names contain the letters LI. This time, order the rows by last name and first name, in that order:
+### -- 2c. Find all actors whose last names contain the letters LI. This time, order the rows by last name and first name, in that order:
 select * from actor
 where last_name like "%LI%"
 order by last_name, first_name;
 
-## -- 2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
+### -- 2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
 select country_id, country from country
 where country in ("Afghanistan", "Bangladesh", "China");
 
-## -- 3a. Add a middle_name column to the table actor. Position it between first_name and last_name. Hint: you will need to specify the data type.
+### -- 3a. Add a middle_name column to the table actor. Position it between first_name and last_name. Hint: you will need to specify the data type.
 alter table actor
 add column middle_name varchar(10) null after first_name;
 select * from actor;
 
-## -- 3b. You realize that some of these actors have tremendously long last names. Change the data type of the middle_name column to blobs.
+### -- 3b. You realize that some of these actors have tremendously long last names. Change the data type of the middle_name column to blobs.
 alter table actor
 change column middle_name middle_name blob;
 
