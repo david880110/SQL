@@ -2,7 +2,7 @@ use sakila;
 
 ### -- 1a. Display the first and last names of all actors from the table actor. 
 select first_name, last_name from actor;
-![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/1a.png)
+<br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/1a.png)
 ### -- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name. 
 select concat_ws(" ", first_name ,  last_name) as `Actor Name` from actor;
 
