@@ -183,7 +183,7 @@ group by store_id
 order by total_Sales desc;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7f.png)
 
--- 7g. Write a query to display for each store its store ID, city, and country.
+### -- 7g. Write a query to display for each store its store ID, city, and country.
 select store_id, city, country
 from store s
 join address a
@@ -192,6 +192,7 @@ join city
 on a.city_id = city.city_id
 join country
 on city.country_id = country.country_id;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7g.png)
 
 -- 7h. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.)
 select * from sales_by_film_category
