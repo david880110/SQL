@@ -47,10 +47,11 @@ select last_name, count(*) as last_name_count from actor
 group by last_name;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/4a.png)
 
--- 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
+### -- 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
 select last_name, count(*) as last_name_count from actor
 group by last_name
 having last_name_count >= 2;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/4b.png)
 
 -- 4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpo's second cousin's husband's yoga teacher. Write a query to fix the record.
 update actor
