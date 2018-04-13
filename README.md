@@ -83,9 +83,10 @@ left join address a
 on s.address_id = a.address_id;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6a.png)
 
--- 6b. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment. 
+### -- 6b. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment. 
 select * from staff;
 select * from payment;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6b.png)
 
 select s.staff_id, s.first_name, s.last_name, p.amount, p.payment_date 
 from staff s 
