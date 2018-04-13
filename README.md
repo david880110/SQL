@@ -114,13 +114,14 @@ on f.film_id = i.film_id
 where title = "HUNCHBACK IMPOSSIBLE";
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6d.png)
 
--- 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
+### -- 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
 select c.customer_id, c.first_name, c.last_name, sum(p.amount) as total_paid
 from customer c
 join payment p
 on c.customer_id = p.customer_id
 group by c.customer_id
 order by c.last_name;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6e.png)
 
 -- 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English. 
 select f.title, l.name 
