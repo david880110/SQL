@@ -153,13 +153,14 @@ on city.country_id = country.country_id
 where country = "canada";
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7c.png)
 
--- 7d. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as famiy films.
+### -- 7d. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as famiy films.
 select f.title, f.description, f.rating, c.name from film f
 join film_category fc
 on f.film_id = fc.film_id
 join category  c
 on fc.category_id = c.category_id
 where fc.category_id = 8;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7d.png)
 
 -- 7e. Display the most frequently rented movies in descending order.
 select f.title, count(r.inventory_id) as rental_count from film f
