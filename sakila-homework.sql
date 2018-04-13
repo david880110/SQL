@@ -31,10 +31,12 @@ select * from actor;
 -- 3b. You realize that some of these actors have tremendously long last names. Change the data type of the middle_name column to blobs.
 alter table actor
 change column middle_name middle_name blob;
+select * from actor;
 
 -- 3c. Now delete the middle_name column.
 alter table actor
 drop column middle_name;
+select * from actor;
 
 -- 4a. List the last names of actors, as well as how many actors have that last name.
 select last_name, count(*) as last_name_count from actor
