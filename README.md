@@ -27,6 +27,7 @@ order by last_name, first_name;
 ### -- 2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
 select country_id, country from country
 where country in ("Afghanistan", "Bangladesh", "China");
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/2d.png)
 
 ### -- 3a. Add a middle_name column to the table actor. Position it between first_name and last_name. Hint: you will need to specify the data type.
 alter table actor
