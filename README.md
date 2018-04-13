@@ -38,13 +38,14 @@ select * from actor;
 alter table actor
 change column middle_name middle_name blob;
 
--- 3c. Now delete the middle_name column.
+### -- 3c. Now delete the middle_name column.
 alter table actor
 drop column middle_name;
 
--- 4a. List the last names of actors, as well as how many actors have that last name.
+### -- 4a. List the last names of actors, as well as how many actors have that last name.
 select last_name, count(*) as last_name_count from actor
 group by last_name;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/4a.png)
 
 -- 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
 select last_name, count(*) as last_name_count from actor
