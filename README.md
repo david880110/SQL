@@ -131,7 +131,7 @@ on f.language_id = l.language_id
 where name = "English" and (title like "q&" or title like "k%");
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7a.png)
 
--- 7b. Use subqueries to display all actors who appear in the film Alone Trip.
+### -- 7b. Use subqueries to display all actors who appear in the film Alone Trip.
 select a.first_name, a.last_name
 from actor a
 join film_actor fa
@@ -139,6 +139,7 @@ on a.actor_id = fa.actor_id
 join film f
 on fa.film_id = f.film_id
 where title = "Alone Trip";
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7b.png)
 
 -- 7c. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information.
 select c.first_name, c.last_name, c.email, country.country
