@@ -141,7 +141,7 @@ on fa.film_id = f.film_id
 where title = "Alone Trip";
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7b.png)
 
--- 7c. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information.
+### -- 7c. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information.
 select c.first_name, c.last_name, c.email, country.country
 from customer c
 join address a
@@ -151,6 +151,7 @@ on a.city_id = city.city_id
 join country
 on city.country_id = country.country_id
 where country = "canada";
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7c.png)
 
 -- 7d. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as famiy films.
 select f.title, f.description, f.rating, c.name from film f
