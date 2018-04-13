@@ -9,7 +9,7 @@ select concat_ws(" ", first_name ,  last_name) as `Actor Name` from actor;
 ### -- 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
 select actor_id, first_name, last_name from actor 
 where first_name = "joe";
-
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/2a.png)
 ### -- 2b. Find all actors whose last name contain the letters GEN:
 select * from actor
 where last_name like "%GEN%";
