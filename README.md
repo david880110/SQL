@@ -13,7 +13,7 @@ where first_name = "joe";
 ### -- 2b. Find all actors whose last name contain the letters GEN:
 select * from actor
 where last_name like "%GEN%";
-
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/2b.png)
 ### -- 2c. Find all actors whose last names contain the letters LI. This time, order the rows by last name and first name, in that order:
 select * from actor
 where last_name like "%LI%"
