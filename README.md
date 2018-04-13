@@ -33,6 +33,7 @@ where country in ("Afghanistan", "Bangladesh", "China");
 alter table actor
 add column middle_name varchar(10) null after first_name;
 select * from actor;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/3a.png)
 
 ### -- 3b. You realize that some of these actors have tremendously long last names. Change the data type of the middle_name column to blobs.
 alter table actor
