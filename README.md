@@ -5,7 +5,7 @@ select first_name, last_name from actor;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/1a.png)
 ### -- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name. 
 select concat_ws(" ", first_name ,  last_name) as `Actor Name` from actor;
-
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/1b.png)
 ### -- 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
 select actor_id, first_name, last_name from actor 
 where first_name = "joe";
