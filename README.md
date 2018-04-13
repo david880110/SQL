@@ -68,6 +68,7 @@ set first_name =
 where last_name = "WILLIAMS";
 select * from actor
 where last_name = "WILLIAMS";
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/4d.png)
 
 ### -- 5a. You cannot locate the schema of the address table. Which query would you use to re-create it? 
 ### -- Hint: https://dev.mysql.com/doc/refman/5.7/en/show-create-table.html
