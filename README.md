@@ -194,10 +194,20 @@ join country
 on city.country_id = country.country_id;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7g.png)
 
--- 7h. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.)
-select * from sales_by_film_category
+### -- 7h. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.)
+select name, sum(amount) as total_sales from category
+join film_category
+using (category_id)
+join inventory
+using (film_id)
+join rental
+using (inventory_id)
+join payment
+using (rental_id)
+group by name
 order by total_sales desc
 limit 5;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7h.png)
 
 -- 8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view.
 drop view if exists top_five_genres;
