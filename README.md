@@ -230,5 +230,5 @@ limit 5;
 select * from top_five_genres;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7h.png)
 
--- 8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
+### -- 8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
 drop view top_five_genres;
