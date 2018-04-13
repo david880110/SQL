@@ -123,12 +123,13 @@ group by c.customer_id
 order by c.last_name;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6e.png)
 
--- 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English. 
+### -- 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English. 
 select f.title, l.name 
 from film f
 join language l
 on f.language_id = l.language_id
 where name = "English" and (title like "q&" or title like "k%");
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7a.png)
 
 -- 7b. Use subqueries to display all actors who appear in the film Alone Trip.
 select a.first_name, a.last_name
