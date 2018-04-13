@@ -53,14 +53,14 @@ group by last_name
 having last_name_count >= 2;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/4b.png)
 
--- 4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpo's second cousin's husband's yoga teacher. Write a query to fix the record.
+### -- 4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpo's second cousin's husband's yoga teacher. Write a query to fix the record.
 update actor
 set first_name = "HARPO"
 where last_name = "WILLIAMS" and first_name = "GROUCHO";
 select last_name, first_name from actor
 where first_name = "HARPO";
 
--- 4d. Perhaps we were too hasty in changing GROUCHO to HARPO. It turns out that GROUCHO was the correct name after all! In a single query, if the first name of the actor is currently HARPO, change it to GROUCHO. Otherwise, change the first name to MUCHO GROUCHO, as that is exactly what the actor will be with the grievous error. BE CAREFUL NOT TO CHANGE THE FIRST NAME OF EVERY ACTOR TO MUCHO GROUCHO, HOWEVER! (Hint: update the record using a unique identifier.)
+### -- 4d. Perhaps we were too hasty in changing GROUCHO to HARPO. It turns out that GROUCHO was the correct name after all! In a single query, if the first name of the actor is currently HARPO, change it to GROUCHO. Otherwise, change the first name to MUCHO GROUCHO, as that is exactly what the actor will be with the grievous error. BE CAREFUL NOT TO CHANGE THE FIRST NAME OF EVERY ACTOR TO MUCHO GROUCHO, HOWEVER! (Hint: update the record using a unique identifier.)
 update actor
 set first_name =
 	if(first_name = "HARPO", "GROUCHO", "MUCHO GROUCHO")
@@ -68,9 +68,10 @@ where last_name = "WILLIAMS";
 select * from actor
 where last_name = "WILLIAMS";
 
--- 5a. You cannot locate the schema of the address table. Which query would you use to re-create it? 
+### -- 5a. You cannot locate the schema of the address table. Which query would you use to re-create it? 
 -- Hint: https://dev.mysql.com/doc/refman/5.7/en/show-create-table.html
 show create table address;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/5a.png)
 
 -- 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
 select * from staff;
