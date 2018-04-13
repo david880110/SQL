@@ -73,7 +73,7 @@ where last_name = "WILLIAMS";
 show create table address;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/5a.png)
 
--- 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
+### -- 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
 select * from staff;
 select * from address;
 
