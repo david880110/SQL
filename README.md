@@ -162,7 +162,7 @@ on fc.category_id = c.category_id
 where fc.category_id = 8;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7d.png)
 
--- 7e. Display the most frequently rented movies in descending order.
+### -- 7e. Display the most frequently rented movies in descending order.
 select f.title, count(r.inventory_id) as rental_count from film f
 join inventory i
 on f.film_id = i.film_id
@@ -171,6 +171,7 @@ on i.inventory_id = r.inventory_id
 group by f.film_id
 having rental_count > 30
 order by rental_count desc;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7e.png)
 
 -- 7f. Write a query to display how much business, in dollars, each store brought in.
 select * from sales_by_store;
