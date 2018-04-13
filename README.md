@@ -230,7 +230,8 @@ limit 5;
 
 ### -- 8b. How would you display the view that you created in 8a?
 select * from top_five_genres;
-<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7h.png)
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/8b.png)
 
 ### -- 8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
 drop view top_five_genres;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/8c.png)
