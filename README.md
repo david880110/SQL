@@ -42,6 +42,7 @@ change column middle_name middle_name blob;
 ### -- 3c. Now delete the middle_name column.
 alter table actor
 drop column middle_name;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/3c.png)
 
 ### -- 4a. List the last names of actors, as well as how many actors have that last name.
 select last_name, count(*) as last_name_count from actor
