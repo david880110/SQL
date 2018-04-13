@@ -226,6 +226,7 @@ using (rental_id)
 group by name
 order by total_sales desc
 limit 5;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/8a.png)
 
 ### -- 8b. How would you display the view that you created in 8a?
 select * from top_five_genres;
