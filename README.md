@@ -173,8 +173,15 @@ having rental_count > 30
 order by rental_count desc;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7e.png)
 
--- 7f. Write a query to display how much business, in dollars, each store brought in.
-select * from sales_by_store;
+### -- 7f. Write a query to display how much business, in dollars, each store brought in.
+select s.store_id, sum(amount) as total_Sales from store s
+join customer
+using (store_id)
+join payment
+using (customer_id)
+group by store_id
+order by total_Sales desc;
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/7f.png)
 
 -- 7g. Write a query to display for each store its store ID, city, and country.
 select store_id, city, country
