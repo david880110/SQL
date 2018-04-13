@@ -106,12 +106,13 @@ on f.film_id = fa.film_id
 group by film_id;
 <br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6c.png)
 
--- 6d. How many copies of the film Hunchback Impossible exist in the inventory system?
+### -- 6d. How many copies of the film Hunchback Impossible exist in the inventory system?
 select f.title, count(*) 
 from film f
 join inventory i
 on f.film_id = i.film_id
 where title = "HUNCHBACK IMPOSSIBLE";
+<br /><br />![alt text](https://github.com/david880110/SQL/blob/master/Result%20Screenshot/6d.png)
 
 -- 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
 select c.customer_id, c.first_name, c.last_name, sum(p.amount) as total_paid
