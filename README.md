@@ -1,16 +1,16 @@
-# use sakila;
+### use sakila;
 
-# -- 1a. Display the first and last names of all actors from the table actor. 
+### -- 1a. Display the first and last names of all actors from the table actor. 
 select first_name, last_name from actor;
 
-# -- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name. 
+### -- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name. 
 select concat_ws(" ", first_name ,  last_name) as `Actor Name` from actor;
 
-# -- 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
+### -- 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
 select actor_id, first_name, last_name from actor 
 where first_name = "joe";
 
-## -- 2b. Find all actors whose last name contain the letters GEN:
+### -- 2b. Find all actors whose last name contain the letters GEN:
 select * from actor
 where last_name like "%GEN%";
 
